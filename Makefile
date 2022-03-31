@@ -6,8 +6,7 @@ SRC=		main.c			\
 			pb.c			\
 			rotate.c		\
 			rr.c			\
-			rra.c			\
-			rrb.c			\
+			r_rotate.c		\
 			rrr.c
 
 
