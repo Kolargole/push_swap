@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 15:41:03 by vimercie          #+#    #+#             */
-/*   Updated: 2022/03/30 15:59:29 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/01 04:17:33 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int error_check(int n, char **list)
 {
-    
+    return (0);
 }

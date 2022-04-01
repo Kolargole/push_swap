@@ -6,11 +6,11 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 16:10:49 by vimercie          #+#    #+#             */
-/*   Updated: 2022/03/31 03:05:24 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/01 04:20:19 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "push_swap.h"
+#include "push_swap.h"
 
 void	rotate(int **stack, char what_stack)
 {
@@ -23,7 +23,7 @@ void	rotate(int **stack, char what_stack)
 	tmp = *stack[0];
 	while (*stack[i])
 	{
-		*stack[i] == *stack[i + 1];
+		*stack[i] = *stack[i + 1];
 		i++;
 	}
 	*stack[i] = tmp;

@@ -1,13 +1,12 @@
 SRC=		main.c			\
-			error_check.c	\
 			swap.c			\
 			ss.c			\
-			pa.c			\
-			pb.c			\
+			push.c			\
 			rotate.c		\
 			rr.c			\
 			r_rotate.c		\
-			rrr.c
+			rrr.c			\
+			quick_sort.c
 
 
 HEADFILES=	push_swap.h
@@ -23,16 +22,21 @@ CFLAGS=		-Wall -Wextra -Werror
 %.o:		%.c ${HEADFILES}
 			${CC} ${CFLAGS} -c $< -o $@
 
-${NAME}:	${OBJ} ${HEADFILES}
+${NAME}:	lib ${OBJ} ${HEADFILES}
 			${CC} ${OBJ} -o $(NAME)
 
 all:		${NAME}
 
+lib:
+			make -C Libft
+
 clean:
 			rm -f ${OBJ}
+			make clean --directory=Libft
 
 fclean:		clean
 			rm -f ${NAME}
+			make fclean --directory=Libft
 
 re:			fclean all
 
