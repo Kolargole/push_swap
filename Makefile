@@ -22,13 +22,12 @@ CFLAGS=		-Wall -Wextra -Werror
 %.o:		%.c ${HEADFILES}
 			${CC} ${CFLAGS} -c $< -o $@
 
-${NAME}:	lib ${OBJ} ${HEADFILES}
-			${CC} ${OBJ} -o $(NAME)
+${NAME}:	${OBJ} ${HEADFILES}
+			make -C Libft
+			ln -sf Libft/libft.a
+			${CC} ${OBJ} libft.a -o ${NAME}
 
 all:		${NAME}
-
-lib:
-			make -C Libft
 
 clean:
 			rm -f ${OBJ}
@@ -37,6 +36,7 @@ clean:
 fclean:		clean
 			rm -f ${NAME}
 			make fclean --directory=Libft
+			rm -f libft.a
 
 re:			fclean all
 

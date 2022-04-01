@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 16:10:38 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/01 04:19:56 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/01 19:19:30 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void	push(int **stack_from, int **stack_to, char push_to)
 {
-	int len;
+	int	len;
 
+	dprintf(1, "hola\n");
 	if (*stack_from[0] == '\0')
 		return ;
 	len = 0;
