@@ -6,7 +6,7 @@ SRC=		main.c			\
 			rr.c			\
 			r_rotate.c		\
 			rrr.c			\
-			quick_sort.c
+			stack_sort.c
 
 
 HEADFILES=	push_swap.h

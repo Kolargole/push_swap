@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 16:10:38 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/05 19:22:48 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/06 22:01:15 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ void	push(int *stack_from, int *stack_to, char push_to)
 	while (stack_from[size])
 		size++;
 	i = size;
-	dprintf(1, "size = %d\n", size);
 	if (i > 0)
 	{
 		while (i >= 0)

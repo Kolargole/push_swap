@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 16:10:49 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/05 19:53:47 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/06 22:01:17 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ void	rotate(int *stack, char what_stack)
 	if (stack[1] == '\0')
 		return ;
 	i = 0;
-	while (stack[i])
+	while (stack[i + 1])
 		i++;
-	tmp = stack[i - 1];
-	while (i > 1)
+	tmp = stack[i];
+	while (i > 0)
 	{
-		i--;
 		stack[i] = stack[i - 1];
+		i--;
 	}
 	stack[0] = tmp;
 	if (what_stack == 'a')

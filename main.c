@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 15:30:22 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/05 17:48:44 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/06 22:58:54 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	main_tester(int *stack_a, int *stack_b)
 	int	i;
 
 	i = 0;
+	dprintf(1,"\n");
 	dprintf (1, "stack_a =\n");
 	while (stack_a[i])
 	{
@@ -31,6 +32,7 @@ void	main_tester(int *stack_a, int *stack_b)
 		dprintf(1, "%d\n", stack_b[i]);
 		i++;
 	}
+	dprintf(1,"\n");
 }
 
 int	main(int argc, char **argv)
@@ -51,6 +53,6 @@ int	main(int argc, char **argv)
 		stack_a[size] = ft_atoi(argv[size + 1]);
 		size++;
 	}
-	quick_sort(stack_a, stack_b, 0, size - 1);
 	main_tester(stack_a, stack_b);
+	stack_sort(stack_a, stack_b);
 }
