@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 20:02:49 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/01 19:31:32 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/05 19:05:53 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,8 @@ int	find_median(int	*stack)
 
 	n = 0;
 	while (stack[n] != '\0')
-	{
-		dprintf(1, "%d\n", stack[n]);
 		n++;
-	}
-	return (n / 2);
+	return ((n / 2) + 1);
 }
 
 // int	partition(int **stack, int first_i, int last_i)
@@ -30,7 +27,7 @@ int	find_median(int	*stack)
 	
 // }
 
-void	quick_sort(int	**stack_a, int **stack_b, int first_i, int last_i)
+void	quick_sort(int	*stack_a, int *stack_b, int first_i, int last_i)
 {
 	int	i;
 	int	size;
@@ -38,21 +35,18 @@ void	quick_sort(int	**stack_a, int **stack_b, int first_i, int last_i)
 
 	i = 0;
 	size = 0;
-	dprintf(1, "hola3\n");
-	pivot = find_median(*stack_a);
-	dprintf(1, "hola4\n");
-	while (*stack_a[size] != '\0')
+	pivot = find_median(stack_a);
+	while (stack_a[size])
 		size++;
-	dprintf(1, "hola5\n");
 	if (first_i < last_i)
 	{
-		while (i < size)
+		while (size > 0)
 		{
-			if (*stack_a[i] > pivot)
+			if (stack_a[0] > pivot)
 				push(stack_a, stack_b, 'b');
 			else
 				rotate(stack_a, 'a');
-			i++;
+			size--;
 		}
 		// partition(stack_a)
 	}

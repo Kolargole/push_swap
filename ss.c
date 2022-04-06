@@ -6,13 +6,13 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 16:11:31 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/01 04:19:21 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/05 17:42:58 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ss(int **stack_a, int **stack_b)
+void	ss(int *stack_a, int *stack_b)
 {
 	swap(stack_a, 't');
 	swap(stack_b, 's');
