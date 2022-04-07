@@ -7,7 +7,8 @@ SRC=		main.c				\
 			r_rotate.c			\
 			rrr.c				\
 			insertion_sort.c	\
-			merge.c
+			merge.c				\
+			is_sorted.c
 
 
 HEADFILES=	push_swap.h

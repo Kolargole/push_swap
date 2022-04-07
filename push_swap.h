@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 15:37:00 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/07 03:41:32 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/08 01:29:31 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include "Libft/libft.h"
 
 void	main_tester(int *stack, char what_stack);
+int		is_sorted(int *stack);
 int		error_check(int n, char **list);
 void	insertion_sort(int	*stack_a, char what_stack);
 void	merge(int *stack_a, int *stack_b);

@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   insertion_sort.c                                   :+:      :+:    :+:   */
+/*   is_sorted.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/31 20:02:49 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/08 01:31:04 by vimercie         ###   ########lyon.fr   */
+/*   Created: 2022/04/08 01:26:40 by vimercie          #+#    #+#             */
+/*   Updated: 2022/04/08 01:29:06 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	insertion_sort(int	*stack, char what_stack)
+int	is_sorted(int *stack)
 {
-	int	size;
-	int	sorted;
+	int	i;
 
-	size = 0;
-	sorted = 0;
-	while (stack[size])
-		size++;
-	while (!is_sorted(stack))
+	i = 1;
+	while (stack[i])
 	{
-		
-		if (stack[0] < stack[1])
-		{
-			sorted = 1;
-			r_rotate(stack, what_stack);
-		}
-		else if (stack[0] > stack[1])
-		{
-			swap(stack, what_stack);
-			sorted++;
-			if (sorted < size)
-				rotate(stack, what_stack);
-		}
+		if (stack[i - 1] > stack[i])
+			return (0);
+		i++;
 	}
+	return (1);
 }
