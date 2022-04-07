@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 15:37:00 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/06 22:58:41 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/07 00:40:13 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 # include <fcntl.h>
 # include "Libft/libft.h"
 
-void	main_tester(int *stack_a, int *stack_b);
+void	main_tester(int *stack_a);
 int		error_check(int n, char **list);
-void	stack_sort(int	*stack_a, int *stack_b);
+void	insertion_sort(int	*stack_a);
 void	swap(int *stack, char what_stack);
 void	ss(int *stack_a, int *stack_b);
 void	push(int *stack_from, int *stack_to, char push_to);
