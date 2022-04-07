@@ -1,12 +1,13 @@
-SRC=		main.c			\
-			swap.c			\
-			ss.c			\
-			push.c			\
-			rotate.c		\
-			rr.c			\
-			r_rotate.c		\
-			rrr.c			\
-			stack_sort.c
+SRC=		main.c				\
+			swap.c				\
+			ss.c				\
+			push.c				\
+			rotate.c			\
+			rr.c				\
+			r_rotate.c			\
+			rrr.c				\
+			insertion_sort.c	\
+			merge.c
 
 
 HEADFILES=	push_swap.h

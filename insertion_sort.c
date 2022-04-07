@@ -1,50 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_sort.c                                       :+:      :+:    :+:   */
+/*   insertion_sort.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 20:02:49 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/07 01:59:30 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/07 04:01:16 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// int	find_median(int	*stack)
-// {
-// 	int	n;
-
-// 	n = 0;
-// 	while (stack[n] != '\0')
-// 		n++;
-// 	return ((n / 2) + 1);
-// }
-
-void	insertion_sort(int	*stack_a)
+void	insertion_sort(int	*stack, char what_stack)
 {
 	int	size;
 	int	sorted;
 
 	size = 0;
 	sorted = 1;
-	while (stack_a[size])
+	while (stack[size])
 		size++;
 	while (sorted < size)
 	{
-		if (stack_a[0] > stack_a[1])
+		if (stack[0] > stack[1])
 		{
-			swap(stack_a, 'a');
+			swap(stack, what_stack);
 			sorted++;
 			if (sorted < size)
-				rotate(stack_a, 'a');
+				rotate(stack, what_stack);
 		}
-		else if (stack_a[0] < stack_a[1])
+		else if (stack[0] < stack[1])
 		{
-			r_rotate(stack_a, 'a');
+			r_rotate(stack, what_stack);
 			sorted = 1;
 		}
-		// main_tester(stack_a);
 	}
 }
