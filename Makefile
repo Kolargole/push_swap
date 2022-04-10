@@ -1,4 +1,5 @@
 SRC=		main.c				\
+			error_check.c		\
 			swap.c				\
 			ss.c				\
 			push.c				\

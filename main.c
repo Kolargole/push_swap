@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 15:30:22 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/08 01:31:12 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/11 01:04:34 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,13 @@ int	main(int argc, char **argv)
 {
 	int	*stack_a;
 	int	*stack_b;
-	int	size;
 	int	i;
+	int	size;
 
-	// if (argc <= 1)
-	// 	return (0);
-	// else
-	// 	return (error_check(argc, argv));
-	size = 0;
+	if (!error_check(argc, argv))
+		return (0);
 	i = 0;
+	size = 0;
 	stack_a = ft_calloc(argc, sizeof(int));
 	stack_b = ft_calloc(argc, sizeof(int));
 	while (size < (argc - 1))
@@ -48,6 +46,8 @@ int	main(int argc, char **argv)
 		stack_a[size] = ft_atoi(argv[size + 1]);
 		size++;
 	}
+	if (is_duplicate(stack_a))
+		return (0);
 	while (i < (size / 2))
 	{
 		push(stack_a, stack_b, 'b');

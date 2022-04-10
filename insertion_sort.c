@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 20:02:49 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/08 01:31:04 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/11 01:02:20 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ void	insertion_sort(int	*stack, char what_stack)
 		size++;
 	while (!is_sorted(stack))
 	{
-		
 		if (stack[0] < stack[1])
 		{
 			sorted = 1;

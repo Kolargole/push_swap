@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 15:37:00 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/08 01:29:31 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/11 00:54:04 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@
 
 void	main_tester(int *stack, char what_stack);
 int		is_sorted(int *stack);
-int		error_check(int n, char **list);
+int		is_integer(char **argv);
+int		is_duplicate(int *stack_a);
+int		error_check(int size, char **argv);
 void	insertion_sort(int	*stack_a, char what_stack);
 void	merge(int *stack_a, int *stack_b);
 void	swap(int *stack, char what_stack);
