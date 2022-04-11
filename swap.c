@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 16:11:15 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/05 17:42:53 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/11 05:43:37 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,12 @@ void    swap(int *stack, char what_stack)
     tmp = stack[0];
     stack[0] = stack[1];
     stack[1] = tmp;
-    if (what_stack == 'a')
-        write(1, "sa\n", 3);
-    if (what_stack == 'b')
-        write(1, "sb\n", 3);
-    if (what_stack == 's')
-        write(1, "ss\n", 3);
+	if (what_stack)
+		return ;
+    // if (what_stack == 'a')
+    //     write(1, "sa\n", 3);
+    // if (what_stack == 'b')
+    //     write(1, "sb\n", 3);
+    // if (what_stack == 's')
+    //     write(1, "ss\n", 3);
 }

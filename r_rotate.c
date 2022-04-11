@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 16:11:03 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/06 22:19:55 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/11 05:43:39 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,12 @@ void	r_rotate(int *stack, char what_stack)
 		i++;
 	}
 	stack[i] = tmp;
-	if (what_stack == 'a')
-		write(1, "rra\n", 4);
-	if (what_stack == 'b')
-		write(1, "rrb\n", 4);
-	if (what_stack == 's')
-		write(1, "rrr\n", 4);
+	if (what_stack)
+		return ;
+	// if (what_stack == 'a')
+	// 	write(1, "rra\n", 4);
+	// if (what_stack == 'b')
+	// 	write(1, "rrb\n", 4);
+	// if (what_stack == 's')
+	// 	write(1, "rrr\n", 4);
 }
