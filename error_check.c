@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 15:41:03 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/11 01:14:10 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/13 18:44:40 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int	is_duplicate(int *stack_a)
 			if (stack_a[i - 1] == stack_a[j])
 			{
 				write(1, "Error\n", 6);
+				free(stack_a);
 				return (1);
 			}
 			j++;

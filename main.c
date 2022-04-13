@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 15:30:22 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/11 20:42:59 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/14 00:37:38 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,19 +43,15 @@ int	main(int argc, char **argv)
 		return (0);
 	size = 0;
 	stack_a = ft_calloc(argc, sizeof(int));
-	stack_b = ft_calloc(argc, sizeof(int));
 	while (size < (argc - 1))
 	{
 		stack_a[size] = ft_atoi(argv[size + 1]);
 		size++;
 	}
 	if (is_duplicate(stack_a))
-	{
-		free_stack(stack_a, stack_b);
 		return (0);
-	}
-	tim_sort(stack_a, stack_b, size);
-	// main_tester(stack_a, 'a');
+	stack_b = ft_calloc(argc, sizeof(int));
+	custom_sort(stack_a, stack_b, size);
 	free_stack(stack_a, stack_b);
 	return (0);
 }
