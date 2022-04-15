@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rr.c                                               :+:      :+:    :+:   */
+/*   chunking.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/30 16:10:59 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/15 17:53:23 by vimercie         ###   ########lyon.fr   */
+/*   Created: 2022/04/15 14:14:33 by vimercie          #+#    #+#             */
+/*   Updated: 2022/04/15 15:02:59 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-void	rr(int *stack_a, int *stack_b)
+void	chunking(int *stack_a, int *stack_b)
 {
-	rotate(stack_a, ' ');
-	rotate(stack_b, 's');
-	return ;
+	int	i;
+
+	i = 0;
+	while (i < size && j < 30)
+	{
+		if (stack_a[0] < 30)
+	}
 }

@@ -1,4 +1,5 @@
 SRC=		main.c				\
+			sorting_utils.c		\
 			error_check.c		\
 			swap.c				\
 			ss.c				\
@@ -8,8 +9,6 @@ SRC=		main.c				\
 			r_rotate.c			\
 			rrr.c				\
 			insertion_sort.c	\
-			custom_sort.c		\
-			custom_sort_utils.c	\
 			merge.c				\
 			is_sorted.c
 

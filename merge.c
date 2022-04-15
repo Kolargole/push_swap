@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 03:01:41 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/14 00:09:56 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/15 17:52:11 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	merge(int *stack_to, int *stack_from, char what_stack, int stack_size)
 {
-	int i;
+	int	i;
 	int	j;
 
 	i = 0;
