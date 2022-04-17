@@ -1,4 +1,5 @@
 SRC=		main.c				\
+			sorting.c			\
 			sorting_utils.c		\
 			error_check.c		\
 			swap.c				\

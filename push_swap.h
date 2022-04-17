@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 15:37:00 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/15 18:18:12 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/17 17:22:07 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int		is_duplicate(int *stack_a);
 void	free_stack(int *stack_a, int *stack_b);
 int		find_min(int *stack_a);
 int		find_max(int *stack_a);
+int		*indexing(int argc, int *stack_a);
+void	sorting(int *stack_a, int *stack_b, int size);
 void	insertion_sort(int *stack, char what_stack);
 void	merge(int *stack_to, int *stack_from, char what_stack, int stack_size);
 void	swap(int *stack, char what_stack);
