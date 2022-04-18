@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 17:50:02 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/18 03:50:12 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/19 01:32:35 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,33 +42,4 @@ int	find_max(int *stack_a, int size)
 		i++;
 	}
 	return (max);
-}
-
-int	*indexing(int argc, int *stack_a)
-{
-	int		i;
-	int		*stack_i;
-	t_min	min;
-
-	stack_i = ft_calloc(argc, sizeof(int));
-	min.laps = 1;
-	min.save = find_min(stack_a, argc - 1) - 1;
-	while (min.laps < argc)
-	{
-		i = 0;
-		min.value = find_max(stack_a, argc - 1) + 1;
-		while (i < argc - 1)
-		{
-			if (stack_a[i] < min.value && stack_a[i] > min.save)
-			{
-				min.value = stack_a[i];
-				min.index = i;
-			}
-			i++;
-		}
-		stack_i[min.index] = min.laps;
-		min.save = min.value;
-		min.laps++;
-	}
-	return (stack_i);
 }

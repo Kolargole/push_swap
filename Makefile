@@ -1,17 +1,15 @@
 SRC=		main.c				\
 			sorting.c			\
 			sorting_utils.c		\
-			error_check.c		\
+			parsing.c			\
+			checking.c			\
 			swap.c				\
 			ss.c				\
 			push.c				\
 			rotate.c			\
 			rr.c				\
 			r_rotate.c			\
-			rrr.c				\
-			insertion_sort.c	\
-			merge.c				\
-			is_sorted.c
+			rrr.c
 
 
 HEADFILES=	push_swap.h
