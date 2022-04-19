@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 15:37:00 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/19 01:18:21 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/19 18:33:21 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct s_min
 typedef struct s_loop
 {
 	int	laps;
-	int	s_size;
+	int	chunk_size;
 	int	b_size;
 }				t_loop;
 

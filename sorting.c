@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 16:27:12 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/19 01:32:44 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/19 18:37:07 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,30 +39,38 @@ void	push_sort(int *stack_a, int *stack_b, int b_size)
 	}
 }
 
-t_loop	sort_stacks(int *stack_a, int *stack_b, int size, t_loop loop)
+t_loop	push_in_range(int *stack_a, int *stack_b, int size, t_loop loop)
 {
 	int	i;
 	int	start;
 	int	end;
 
+	i = 0;
+	start = loop.chunk_size * loop.laps;
+	end = loop.chunk_size * (loop.laps + 1);
+	while (i < size - (loop.laps * loop.chunk_size))
+	{
+		if (is_in_range(stack_a[0], start, end))
+		{
+			push_sort(stack_a, stack_b, loop.b_size);
+			loop.b_size++;
+		}
+		else
+			r_rotate(stack_a, 'a');
+		i++;
+	}
+	return (loop);
+}
+
+t_loop	sort_stacks(int *stack_a, int *stack_b, int size, t_loop loop)
+{
+	int	i;
+
 	loop.laps = 0;
 	loop.b_size = 0;
-	while ((loop.laps + 1) * loop.s_size < size)
+	while ((loop.laps + 1) * loop.chunk_size < size)
 	{
-		i = 0;
-		start = loop.s_size * loop.laps;
-		end = loop.s_size * (loop.laps + 1);
-		while (i < size - (loop.laps * loop.s_size))
-		{
-			if (is_in_range(stack_a[0], start, end))
-			{
-				push_sort(stack_a, stack_b, loop.b_size);
-				loop.b_size++;
-			}
-			else
-				r_rotate(stack_a, 'a');
-			i++;
-		}
+		loop = push_in_range(stack_a, stack_b, size, loop);
 		i = 0;
 		while (i < loop.laps * size)
 		{
@@ -96,10 +104,9 @@ void	sort_remainder(int *stack_a, int *stack_b, t_loop loop)
 
 void	sorting(int *stack_a, int *stack_b, int size)
 {
-	t_loop loop;
+	t_loop	loop;
 
-// choose stack_size here :
-	loop.s_size = 30;
+	loop.chunk_size = 30;
 	loop = sort_stacks(stack_a, stack_b, size, loop);
 	sort_remainder(stack_a, stack_b, loop);
 }
