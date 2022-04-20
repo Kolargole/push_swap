@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 15:37:00 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/19 19:38:12 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/20 17:44:52 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
-# include "Libft/libft.h"
+# include "../Libft/libft.h"
 
 typedef struct s_min
 {
@@ -31,6 +31,7 @@ typedef struct s_min
 
 typedef struct s_loop
 {
+	int	i;
 	int	laps;
 	int	chunk_size;
 	int	b_size;
@@ -40,7 +41,7 @@ void	main_tester(int *stack, char what_stack);
 
 // sorting algorithm :
 void	sorting(int *stack_a, int *stack_b, int size);
-void	push_sort(int *stack_a, int *stack_b, int b_size);
+t_loop	push_sort(int *stack_a, int *stack_b, t_loop loop);
 t_loop	push_in_range(int *stack_a, int *stack_b, int size, t_loop loop);
 t_loop	sort_stacks(int *stack_a, int *stack_b, int size, t_loop loop);
 void	sort_remainder(int *stack_a, int *stack_b, int size, t_loop loop);
@@ -55,6 +56,7 @@ void	free_stack(int *stack_a, int *stack_b);
 int		find_min(int *stack_a, int size);
 int		find_max(int *stack_a, int size);
 int		max_laps(int size, int chunk_size);
+t_loop	is_rr(int *stack_a, int *stack_b, t_loop loop);
 
 // checking :
 int		is_sorted(int *stack);

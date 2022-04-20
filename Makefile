@@ -1,49 +1,58 @@
-SRC=		main.c				\
-			parsing.c			\
-			checking.c			\
-			sorting.c			\
-			sorting_utils.c		\
-			swap.c				\
-			ss.c				\
-			push.c				\
-			rotate.c			\
-			rr.c				\
-			r_rotate.c			\
+NAME=		push_swap
+
+VPATH=		src/
+
+OBJDIR=		obj
+
+INCDIR=		inc
+
+SRC=		main.c						\
+			parsing.c					\
+			checking.c					\
+			sorting.c					\
+			sorting_utils.c				\
+			swap.c						\
+			ss.c						\
+			push.c						\
+			rotate.c					\
+			rr.c						\
+			r_rotate.c					\
 			rrr.c
 
 
-HEADFILES=	push_swap.h
+OBJ=		${addprefix ${OBJDIR}/,		\
+			${SRC:.c=.o}}
 
-OBJ=		${SRC:.c=.o}
-
-NAME=		push_swap
+INC=		${INCDIR}/push_swap.h
 
 CC=			cc
 
 CFLAGS=		-Wall -Wextra -Werror
 
-%.o:		%.c ${HEADFILES}
-			${CC} ${CFLAGS} -c $< -o $@
+all:		${OBJDIR} ${NAME}
 
-${NAME}:	${OBJ} ${HEADFILES}
+${NAME}:	${OBJ} ${INC}
 			make -C Libft
-			ln -sf Libft/libft.a
-			${CC} ${OBJ} libft.a -o ${NAME}
+			${CC} ${OBJ} Libft/libft.a -o ${NAME}
 
-all:		${NAME}
+${OBJDIR}:
+			mkdir -p obj
+
+${OBJDIR}/%.o:	%.c ${INC}
+				${CC} ${CFLAGS} -c $< -o $@
+
 
 clean:
-			rm -f ${OBJ}
-			make clean --directory=Libft
+			rm -rf ${OBJDIR}
+			make clean -C Libft
 
 fclean:		clean
-			rm -f ${NAME}
-			make fclean --directory=Libft
-			rm -f libft.a
+			${RM} ${NAME} libft.a
+			make fclean -C Libft
 
 re:			fclean all
 
-.PHONY:		clean
+.PHONY:		all clean fclean re froggy
 
 froggy:
 	@tput setaf 2

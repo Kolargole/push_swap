@@ -6,11 +6,11 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 16:10:11 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/19 19:49:23 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/20 16:39:33 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 void	rrr(int *stack_a, int *stack_b)
 {

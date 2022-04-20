@@ -6,11 +6,11 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 15:30:22 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/20 14:52:51 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/20 17:57:53 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 void	main_tester(int *stack, char what_stack)
 {
@@ -41,23 +41,7 @@ int	main(int argc, char **argv)
 	stack_b = ft_calloc(argc, sizeof(int));
 	if (!stack_a || !stack_b)
 		return (0);
-	// main_tester(stack_a, 'a');
-	// main_tester(stack_b, 'b');
-	// if (is_sorted(stack_a))
-	// 	dprintf(1, "Cette liste est triée.\n");
-	// else
-	// 	dprintf(1, "Cette liste n'est pas triée.\n");
-	// if (is_sorted(stack_a))
-	// 	dprintf(1, "Cette liste est triée.\n");
-	// else
-	// 	dprintf(1, "Cette liste n'est pas triée.\n");
 	sorting(stack_a, stack_b, argc - 1);
-	// main_tester(stack_a, 'a');
-	// main_tester(stack_b, 'b');
-	// if (is_sorted(stack_a))
-	// 	dprintf(1, "Cette liste est triée.\n");
-	// else
-	// 	dprintf(1, "Cette liste n'est pas triée.\n");
 	free_stack(stack_a, stack_b);
 	return (0);
 }

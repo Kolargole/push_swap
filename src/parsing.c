@@ -6,11 +6,11 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 01:21:52 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/19 01:23:41 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/20 16:39:33 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 int	*parser(int argc, char **argv)
 {

@@ -6,11 +6,11 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 16:10:38 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/20 13:49:12 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/20 16:49:49 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 void	push(int *stack_from, int *stack_to, char push_to)
 {
@@ -41,8 +41,6 @@ void	push(int *stack_from, int *stack_to, char push_to)
 		i++;
 	}
 	stack_from[i] = '\0';
-	// if (push_to)
-	// 	return ;
 	if (push_to == 'a')
 		write(1, "pa\n", 3);
 	if (push_to == 'b')
