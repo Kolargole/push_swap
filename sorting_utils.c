@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 17:50:02 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/19 01:32:35 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/04/20 12:06:34 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,14 @@ int	find_max(int *stack_a, int size)
 		i++;
 	}
 	return (max);
+}
+
+int	max_laps(int size, int chunk_size)
+{
+	int	laps;
+
+	laps = 0;
+	while (laps * chunk_size < size)
+		laps++;
+	return (laps - 1);
 }

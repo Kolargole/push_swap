@@ -1,8 +1,8 @@
 SRC=		main.c				\
-			sorting.c			\
-			sorting_utils.c		\
 			parsing.c			\
 			checking.c			\
+			sorting.c			\
+			sorting_utils.c		\
 			swap.c				\
 			ss.c				\
 			push.c				\
