@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 15:30:22 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/20 17:57:53 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/05/25 18:17:11 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	main(int argc, char **argv)
 	stack_b = ft_calloc(argc, sizeof(int));
 	if (!stack_a || !stack_b)
 		return (0);
-	sorting(stack_a, stack_b, argc - 1);
+	radix(stack_a, stack_b);
 	free_stack(stack_a, stack_b);
 	return (0);
 }

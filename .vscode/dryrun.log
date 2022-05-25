@@ -1,0 +1,9 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/vimercie/Documents/vimercie_GH/push_swap'
+cc -Wall -Wextra -Werror -c src/radix_sort.c -o obj/radix_sort.o
+ 
+make -C Libft
+cc obj/main.o obj/parsing.o obj/checking.o obj/radix_sort.o obj/sorting.o obj/sorting_utils.o obj/swap.o obj/ss.o obj/push.o obj/rotate.o obj/rr.o obj/r_rotate.o obj/rrr.o Libft/libft.a -o push_swap
+ 
+make: Leaving directory `/Users/vimercie/Documents/vimercie_GH/push_swap'
+ 

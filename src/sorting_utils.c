@@ -6,11 +6,21 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 17:50:02 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/20 17:44:48 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/05/25 17:55:16 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
+
+int	get_stack_size(int *stack)
+{
+	int	i;
+
+	i = 0;
+	while (stack[i])
+		i++;
+	return (i);
+}
 
 int	find_min(int *stack_a, int size)
 {

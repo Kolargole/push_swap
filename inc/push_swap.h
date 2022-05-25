@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 15:37:00 by vimercie          #+#    #+#             */
-/*   Updated: 2022/04/20 17:44:52 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/05/25 18:09:49 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void	main_tester(int *stack, char what_stack);
 
 // sorting algorithm :
 void	sorting(int *stack_a, int *stack_b, int size);
+void	radix(int *stack_a, int *stack_b);
 t_loop	push_sort(int *stack_a, int *stack_b, t_loop loop);
 t_loop	push_in_range(int *stack_a, int *stack_b, int size, t_loop loop);
 t_loop	sort_stacks(int *stack_a, int *stack_b, int size, t_loop loop);
@@ -53,6 +54,7 @@ int		*indexing(int argc, int *stack_a);
 void	free_stack(int *stack_a, int *stack_b);
 
 // utils :
+int		get_stack_size(int *stack);
 int		find_min(int *stack_a, int size);
 int		find_max(int *stack_a, int size);
 int		max_laps(int size, int chunk_size);

@@ -1,0 +1,539 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-apple-darwin11.3.0
+ 
+
+# Make data base, printed on Wed May 25 18:09:28 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# makefile (from `Makefile', line 24)
+OBJ = ${addprefix ${OBJDIR}/, ${SRC:.c=.o}}
+# makefile (from `Makefile', line 7)
+INCDIR = inc
+# makefile (from `Makefile', line 9)
+SRC = main.c parsing.c checking.c radix_sort.c sorting.c sorting_utils.c swap.c ss.c push.c rotate.c rr.c r_rotate.c rrr.c
+ 
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /Users/vimercie/Documents/vimercie_GH/push_swap
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/bin/make
+# makefile (from `Makefile', line 31)
+CFLAGS = -Wall -Wextra -Werror
+# makefile (from `Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000bjlm002wcx/T/vscode-ipc-eb9cc0cf-ac3b-4830-9430-ac3caa2c306f.sock
+# environment
+VSCODE_CWD = /
+# environment
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.3Kocr46mhL/Render
+# environment
+PATH = /Users/vimercie/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/opt/X11/bin
+# environment
+LSCOLORS = Gxfxcxdxbxegedabagacad
+# makefile (from `Makefile', line 3)
+VPATH = src/
+# environment
+VSCODE_LOG_STACK = false
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
+# environment
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.xFHsHNLKt5/Listeners
+# automatic
+%F = $(notdir $%)
+# environment
+HOMEBREW_TEMP = /tmp/vimercie/Homebrew/Temp
+# environment
+DISPLAY = /private/tmp/com.apple.launchd.FpeZcm4zQt/org.xquartz:0
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /Users/vimercie/Documents/vimercie_GH/push_swap
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /Users/vimercie
+# default
+MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
+# environment
+VSCODE_CODE_CACHE_PATH = /Users/vimercie/Library/Application Support/Code/CachedData/57fd6d0195bb9b9d1b49f6da5db789060795de47
+# environment
+LOGNAME = vimercie
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+ZSH = /Users/vimercie/.oh-my-zsh
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XPC_FLAGS = 0x0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+HOMEBREW_CACHE = /tmp/vimercie/Homebrew/Caches
+# environment
+SHLVL = 1
+# makefile (from `Makefile', line 29)
+CC = cc
+# default
+MAKE_VERSION := 3.81
+# environment
+USER = vimercie
+# makefile
+.DEFAULT_GOAL := all
+# makefile (from `Makefile', line 1)
+NAME = push_swap
+# environment
+LESS = -R
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
+# makefile (from `Makefile', line 27)
+INC = ${INCDIR}/push_swap.h
+# default
+.VARIABLES := 
+# environment
+TMPDIR = /var/folders/zz/zyxvpxvq6csfxvn_n000bjlm002wcx/T/
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /Users/vimercie/Library/Application Support/Code/1.67.0-main.sock
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+MFLAGS = -Rrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+XPC_SERVICE_NAME = com.microsoft.VSCode.2560
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# environment
+__CF_USER_TEXT_ENCODING = 0x1719D:0x0:0x0
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# makefile (from `Makefile', line 5)
+OBJDIR = obj
+# environment
+PAGER = less
+# environment
+LC_ALL = C
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# default
+.INCLUDE_DIRS = /usr/local/include
+# environment
+MAKELEVEL := 0
+# environment
+LANG = C
+# environment
+VSCODE_PID = 20699
+# variable set hash-table stats:
+# Load=77/1024=8%, Rehash=0, Collisions=3/117=3%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 16777229, inode 2994703): 10 files, no impossibilities.
+# src/obj: could not be stat'd.
+# src (device 16777229, inode 3079198): 15 files, no impossibilities.
+# inc (device 16777229, inode 3079202): No files, no impossibilities so far.
+
+# 25 files, no impossibilities in 4 directories.
+
+# Implicit Rules
+
+obj/%.o: %.c inc/push_swap.h
+#  commands to execute (from `Makefile', line 43):
+	${CC} ${CFLAGS} -c $< -o $@
+	
+
+# 1 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+all: obj push_swap
+#  Phony target (prerequisite of .PHONY).
+#  Command-line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+
+# Not a target:
+inc/push_swap.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-25 18:08:50
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+.PHONY: all clean fclean re froggy
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/rr.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/r_rotate.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/checking.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-20 16:39:33
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+obj/main.o: src/main.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `main'
+#  Last modified 2022-05-25 18:08:52
+#  File has been updated.
+ 
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 43):
+	${CC} ${CFLAGS} -c $< -o $@
+	
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-25 18:09:23
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+obj/parsing.o: src/parsing.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `parsing'
+#  Last modified 2022-05-25 18:08:52
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 43):
+	${CC} ${CFLAGS} -c $< -o $@
+	
+
+fclean: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 51):
+	${RM} ${NAME} libft.a
+	make fclean -C Libft
+	
+
+# Not a target:
+src/main.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-25 18:08:18
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+obj/sorting_utils.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+obj:
+#  Implicit rule search has not been done.
+#  Last modified 2022-05-25 18:09:25
+#  File has been updated.
+#  Successfully updated.
+#  commands to execute (from `Makefile', line 40):
+	mkdir -p obj
+	
+
+# Not a target:
+src/parsing.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-20 16:39:33
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/swap.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/rrr.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+re: fclean all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+obj/radix_sort.o: src/radix_sort.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `radix_sort'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := obj/radix_sort.o
+# automatic
+# % := 
+# automatic
+# * := radix_sort
+# automatic
+# + := src/radix_sort.c inc/push_swap.h
+# automatic
+# | := 
+# automatic
+# < := src/radix_sort.c
+# automatic
+# ^ := src/radix_sort.c inc/push_swap.h
+# automatic
+# ? := src/radix_sort.c inc/push_swap.h
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
+#  commands to execute (from `Makefile', line 43):
+	${CC} ${CFLAGS} -c $< -o $@
+	
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 47):
+	rm -rf ${OBJDIR}
+	make clean -C Libft
+	
+
+push_swap: obj/main.o obj/parsing.o obj/checking.o obj/radix_sort.o obj/sorting.o obj/sorting_utils.o obj/swap.o obj/ss.o obj/push.o obj/rotate.o obj/rr.o obj/r_rotate.o obj/rrr.o inc/push_swap.h
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/4=0%
+#  commands to execute (from `Makefile', line 36):
+	make -C Libft
+	${CC} ${OBJ} Libft/libft.a -o ${NAME}
+	
+
+# Not a target:
+obj/push.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+froggy:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 59):
+	@tput setaf 2
+	@echo "                 db."
+	@echo "                d88P"
+	@echo "                88P"
+	@echo "         8P    d88"
+	@echo "         8     88P                                               d88"
+	@echo "        d8b   d88                                               d8P"
+	@echo "        888   88P                                             d88P"
+	@echo "        8888888P                                  ..od888888888P"
+	@echo "        8888888     d8b                       d88888888888888P       d8b"
+	@echo "        8888888   d88P                     .d888888888888888888888b d88P"
+	@echo "       d88888888888'                     d88888888888888888888888888P'"
+	@echo "      d888888888888                    d888888888888P888888b"
+	@echo "      8888888888d88b                   888888888888P888888888b..db"
+	@echo "     d88888888d88888b                  Y888888888K   Y8b     'Y8888"
+	@echo "     88888888d8888888b                  Y8888888888b  Y8b      'YP"
+	@echo "    d8888888d888888888b              ... 'Y8888888888b.YP  .d888888bo."
+	@echo "   d8888888d8888888888P         .od888888888b88d88888888888888888888888b."
+	@echo "   8888888d88888888888     .d88888888888888888888888888888888888888888888b."
+	@echo "   888888d88888888888P  .d8888888888888888888888888888888888888888888888888b"
+	@echo "   888888888888888888 d88888888888888888888888888888888888888888888888888888b"
+	@echo "  d88888d88888888888d88888888888888888888888888888888888888888888888888888888"
+	@echo "  88888d88888888888d88888888888888888888888888888888888888888888888888888888P"
+	@echo "  8888d88888888888d888888888888888888888888888888888888888888888888888888888"
+	@echo "  888888888888888d888888888888888888888888888888888888888888888888888888888P"
+	@echo "  88888888888888d888888888888888888888888888888888888888888888888888888888P"
+	@echo "  8888888888888d888888888888888888888888888888888888888888888888888888888P"
+	@echo "  Y888888888888888888888888888888888888888888888888888888888888888888888P"
+	@echo "   Y888Pd8888d888888888888888888888888888888888888888888888888888888888'"
+	@echo "       d888d88888888888888888888         88888888888888888888888888888P"
+	@echo "      .88d88888888888888888888   8888888   8888888888888888888888888P"
+	@echo "      :d8888888888888888888888   8888888   8888888888888888888P  ''"
+	@echo "      :88888888888888888888888   8888888   888888888888888888P"
+	@echo "      :88888888888888888888888   8888888   888888888888P8888P"
+	@echo "       8b88888888888888888888888          88888888888P888888"
+	@echo "       888b888888888888888888888888888888  888888888Pd88888P"
+	@echo "       '88888b8888888888888888888888888888  8888888Pd888888"
+	@echo "        Y88888888b8888888888888888888888888888888P d888888P"
+	@echo "         8888888888b888888888888888888888888888P'  8888888"
+	@echo "         '88888888888Y88888888888888888888888P     8888888b"
+	@echo "          Y888888888888Y8888888888888888888P       Y8888888      d88b"
+	@echo "           'Y8888888888b 'Y888888888888P'           Y888888b  d888P Y88"
+	@echo "             Y8888888888b     '''''''                 Y8888888888P"
+	@echo "              Y8888888888b                            Y888888888b      .db"
+	@echo " d8b.          Y8888888888                             Y88888888888888888P"
+	@echo " 8888888888888888888888888b                             Y88888888888bo."
+	@echo "d88888888888888888888888888                              Y888888888888888bo."
+	@echo "Y88888888888888888888888888b                              'Y8888888888888888888b"
+	@echo " 888888888888888888888888888                                Y88888888b      'P8P"
+	@echo " Y888b 'Y888888888888888888P                                   'Y88888b."
+	@echo "  8888b   'Y88888888888888P                                         'Y88b"
+ 
+	@echo "  Y8888.     'Y8888888888P                                            'Y8b."
+	@echo "   88888b         '''''                                                 'Y88"
+	@echo "   Y88888b"
+	@echo "    Y888888bo.  ."
+	@echo "     8888888888888"
+	@echo "     Y8888888b8b '"
+	@echo "      Y88888888b88b"
+	@echo "       Y888888b88b888b"
+	@echo "        Y888888bY88b8P"
+	@echo "         '888888b Y88bo."
+	@echo "          Y888888b  'Y8888b"
+	@echo "           Y888888b    'YP"
+	@echo "            8888888b"
+	@echo "            888P Y888b"
+	@echo "            Y88   'Y88b";
+	@echo "             Y8     Y88"
+	@echo "              8b     Y8b"
+	@echo "              88P     '8b"
+	@echo "              '8       Y8P"
+	
+
+# Not a target:
+obj/ss.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/rotate.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/sorting.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/radix_sort.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-25 18:08:43
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+obj/checking.o: src/checking.c inc/push_swap.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `checking'
+#  Last modified 2022-05-25 18:08:52
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 43):
+	${CC} ${CFLAGS} -c $< -o $@
+	
+
+# files hash-table stats:
+# Load=29/1024=3%, Rehash=0, Collisions=0/114=0%
+# VPATH Search Paths
+
+# No `vpath' search paths.
+
+# General (`VPATH' variable) search path:
+# src
+
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+
+# Finished Make data base on Wed May 25 18:09:28 2022
+
+ 

@@ -9,6 +9,7 @@ INCDIR=		inc
 SRC=		main.c						\
 			parsing.c					\
 			checking.c					\
+			radix_sort.c				\
 			sorting.c					\
 			sorting_utils.c				\
 			swap.c						\
