@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 15:30:22 by vimercie          #+#    #+#             */
-/*   Updated: 2022/05/25 18:17:11 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/06/06 01:53:00 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,31 @@ int	main(int argc, char **argv)
 	int	*stack_a;
 	int	*stack_b;
 
-	if (!error_check(argc, argv))
+	if (error_check(argc, argv))
 		return (0);
 	stack_a = parser(argc, argv);
-	if (is_duplicate(stack_a))
+	if (!stack_a)
 		return (0);
-	stack_a = indexing(argc, stack_a);
 	stack_b = ft_calloc(argc, sizeof(int));
-	if (!stack_a || !stack_b)
+	if (!stack_b)
+	{
+		free(stack_a);
 		return (0);
+	}
+	if (is_sorted(stack_a))
+	{
+		free_stack(stack_a, stack_b);
+		return (0);
+	}
+	if (argc < 6)
+	{
+		low_argc(argc, stack_a, stack_b);
+		// main_tester(stack_a, 'a');
+		free_stack(stack_a, stack_b);
+		return (0);
+	}
 	radix(stack_a, stack_b);
+	main_tester(stack_a, 'a');
 	free_stack(stack_a, stack_b);
 	return (0);
 }

@@ -10,6 +10,7 @@ SRC=		main.c						\
 			parsing.c					\
 			checking.c					\
 			radix_sort.c				\
+			low_argc.c					\
 			sorting.c					\
 			sorting_utils.c				\
 			swap.c						\

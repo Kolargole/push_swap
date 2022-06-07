@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 15:37:00 by vimercie          #+#    #+#             */
-/*   Updated: 2022/05/25 18:09:49 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/06/06 01:47:54 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,9 @@ typedef struct s_loop
 void	main_tester(int *stack, char what_stack);
 
 // sorting algorithm :
-void	sorting(int *stack_a, int *stack_b, int size);
 void	radix(int *stack_a, int *stack_b);
+void	low_argc(int argc, int *stack_a, int *stack_b);
+void	sorting(int *stack_a, int *stack_b, int size);
 t_loop	push_sort(int *stack_a, int *stack_b, t_loop loop);
 t_loop	push_in_range(int *stack_a, int *stack_b, int size, t_loop loop);
 t_loop	sort_stacks(int *stack_a, int *stack_b, int size, t_loop loop);
@@ -63,7 +64,7 @@ t_loop	is_rr(int *stack_a, int *stack_b, t_loop loop);
 // checking :
 int		is_sorted(int *stack);
 int		is_integer(char **argv);
-int		is_duplicate(int *stack_a);
+int		is_duplicate(char **argv);
 int		is_in_range(int n, int start, int end);
 
 // instructions :
