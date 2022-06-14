@@ -8,11 +8,10 @@ INCDIR=		inc
 
 SRC=		main.c						\
 			parsing.c					\
+			parsing_utils.c				\
 			checking.c					\
 			radix_sort.c				\
 			low_argc.c					\
-			sorting.c					\
-			sorting_utils.c				\
 			swap.c						\
 			ss.c						\
 			push.c						\
@@ -27,20 +26,24 @@ OBJ=		${addprefix ${OBJDIR}/,		\
 
 INC=		${INCDIR}/push_swap.h
 
+LIB=		Libft/libft.a
+
 CC=			cc
 
 CFLAGS=		-Wall -Wextra -Werror
 
-all:		${OBJDIR} ${NAME}
+all:		lib ${OBJDIR} ${NAME}
 
 ${NAME}:	${OBJ} ${INC}
+			${CC} ${OBJ} ${LIB} -o ${NAME}
+
+lib:
 			make -C Libft
-			${CC} ${OBJ} Libft/libft.a -o ${NAME}
 
 ${OBJDIR}:
 			mkdir -p obj
 
-${OBJDIR}/%.o:	%.c ${INC}
+${OBJDIR}/%.o:	%.c ${INC} Makefile
 				${CC} ${CFLAGS} -c $< -o $@
 
 

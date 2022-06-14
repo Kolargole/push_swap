@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 15:30:22 by vimercie          #+#    #+#             */
-/*   Updated: 2022/06/06 01:53:00 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/06/14 15:41:55 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ void	main_tester(int *stack, char what_stack)
 	int	i;
 
 	i = 0;
-	dprintf(1, "\n");
-	dprintf (1, "stack_%c =\n", what_stack);
+	dprintf(2, "\n");
+	dprintf (2, "stack_%c =\n", what_stack);
 	while (stack[i])
 	{
-		dprintf(1, "%d\n", stack[i]);
+		dprintf(2, "%d\n", stack[i]);
 		i++;
 	}
-	dprintf(1, "\n");
+	dprintf(2, "\n");
 }
 
 int	main(int argc, char **argv)
@@ -48,15 +48,10 @@ int	main(int argc, char **argv)
 		free_stack(stack_a, stack_b);
 		return (0);
 	}
-	if (argc < 6)
-	{
+	if (argc <= 6)
 		low_argc(argc, stack_a, stack_b);
-		// main_tester(stack_a, 'a');
-		free_stack(stack_a, stack_b);
-		return (0);
-	}
-	radix(stack_a, stack_b);
-	main_tester(stack_a, 'a');
+	else
+		radix(stack_a, stack_b);
 	free_stack(stack_a, stack_b);
 	return (0);
 }

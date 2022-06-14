@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 01:19:08 by vimercie          #+#    #+#             */
-/*   Updated: 2022/06/05 16:51:42 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/06/14 14:44:35 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,18 @@ int	is_signed_int(char **argv)
 	i = 1;
 	while (argv[i])
 	{
+		argv[i] = remove_zeros(argv[i]);
 		size = ft_strlen(argv[i]);
 		if (argv[i][0] != '-')
 		{
-			if (size > 10 || (size == 10 && ft_strcmp(argv[i], "2147483647") > 0))
+			if (size > 10
+				|| (size == 10 && ft_strcmp(argv[i], "2147483647") > 0))
 				return (0);
 		}
 		else
 		{
-			if (size > 11 || (size == 11 && ft_strcmp(argv[i], "-2147483648") > 0))
+			if (size > 11
+				|| (size == 11 && ft_strcmp(argv[i], "-2147483648") > 0))
 				return (0);
 		}
 		i++;
@@ -86,7 +89,8 @@ int	is_duplicate(char **argv)
 		size = ft_strlen(argv[i - 1]);
 		while (argv[j])
 		{
-			if (size == ft_strlen(argv[j]) && ft_strcmp(argv[i - 1], argv[j]) == 0)
+			if (size == ft_strlen(argv[j])
+				&& ft_strcmp(argv[i - 1], argv[j]) == 0)
 				return (1);
 			j++;
 		}

@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 17:27:43 by vimercie          #+#    #+#             */
-/*   Updated: 2022/05/25 18:09:33 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/06/14 15:01:40 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	radix(int *stack_a, int *stack_b)
 {
 	int	i;
-	int j;
+	int	j;
 	int	n;
 	int	size;
 

@@ -6,7 +6,7 @@
 /*   By: vimercie <vimercie@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 15:37:00 by vimercie          #+#    #+#             */
-/*   Updated: 2022/06/06 01:47:54 by vimercie         ###   ########lyon.fr   */
+/*   Updated: 2022/06/14 15:21:25 by vimercie         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,12 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
-# include "../Libft/libft.h"
+# include "../Libft/inc/libft.h"
 
 typedef struct s_min
 {
+	int	*stack;
+	int	i;
 	int	laps;
 	int	value;
 	int	index;
@@ -42,11 +44,6 @@ void	main_tester(int *stack, char what_stack);
 // sorting algorithm :
 void	radix(int *stack_a, int *stack_b);
 void	low_argc(int argc, int *stack_a, int *stack_b);
-void	sorting(int *stack_a, int *stack_b, int size);
-t_loop	push_sort(int *stack_a, int *stack_b, t_loop loop);
-t_loop	push_in_range(int *stack_a, int *stack_b, int size, t_loop loop);
-t_loop	sort_stacks(int *stack_a, int *stack_b, int size, t_loop loop);
-void	sort_remainder(int *stack_a, int *stack_b, int size, t_loop loop);
 
 // parsing :
 int		*parser(int argc, char **argv);
@@ -55,11 +52,11 @@ int		*indexing(int argc, int *stack_a);
 void	free_stack(int *stack_a, int *stack_b);
 
 // utils :
+char	*remove_zeros(char *n);
 int		get_stack_size(int *stack);
 int		find_min(int *stack_a, int size);
 int		find_max(int *stack_a, int size);
 int		max_laps(int size, int chunk_size);
-t_loop	is_rr(int *stack_a, int *stack_b, t_loop loop);
 
 // checking :
 int		is_sorted(int *stack);
